@@ -40,6 +40,7 @@ function showDistanceAndClue () {
     OLED.newLine()
     if (distance > 160 && distance < 200) {
         OLED.writeStringNewLine("I am from the 1980s")
+        serial.writeLine("I am from the 1980s")
         OLED.newLine()
         OLED.writeStringNewLine("Press \"A\" to reveal!")
     }
@@ -48,26 +49,32 @@ function showDistanceAndClue () {
         OLED.writeStringNewLine("with many sequels")
         OLED.newLine()
         OLED.writeStringNewLine("Press \"A\" to reveal!")
+        serial.writeLine("I am a famous movie with many sequels")
     }
     if (distance > 100 && distance < 139) {
         OLED.writeStringNewLine("I featured an ")
         OLED.writeStringNewLine("unusual business")
         OLED.newLine()
         OLED.writeStringNewLine("Press \"A\" to reveal!")
+        serial.writeLine("I featured an unusual business")
     }
     if (distance > 70 && distance < 99) {
         OLED.writeStringNewLine("Famous line:")
         OLED.writeStringNewLine("\"HE SLIMED ME!\"")
         OLED.newLine()
         OLED.writeStringNewLine("Press \"A\" to reveal!")
+        serial.writeLine("Famous line: \"HE SLIMED ME!!\"")
     }
     if (distance > 40 && distance < 69) {
         OLED.writeStringNewLine("WHO YOU GONNA CALL?")
         OLED.newLine()
         OLED.writeStringNewLine("Press \"A\" to reveal!")
+        serial.writeLine("WHO YOU GONNA CALL??")
     }
     OLED.newLine()
     OLED.writeStringNewLine("" + distance + " mm")
+    serial.writeLine("" + distance + " mm")
+    serial.writeLine("")
 }
 let distance = 0
 OLED.init(128, 64)
